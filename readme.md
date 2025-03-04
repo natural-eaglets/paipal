@@ -2,6 +2,8 @@
   <h1>🤖 Paipal Protocol</h1>
   <p><strong>AI-Powered DeFi Yield Optimization</strong></p>
   
+  [![Website](https://img.shields.io/badge/Website-paipal.ai-blue)](https://paipal.ai)
+  [![Data](https://img.shields.io/badge/Data-Preview-green)](https://data.paipal.ai)
   [![Twitter Follow](https://img.shields.io/twitter/follow/paipal_ai?style=social)](https://twitter.com/paipal_ai)
   [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 </div>
@@ -87,7 +89,7 @@ Paipal revolutionizes DeFi yield farming by combining **AI, TEEs, and smart wall
   
   ### 🌐 Join the Revolution
   
-  [Website](https://paipal.ai) · [Twitter](https://twitter.com/paipal_ai) 
+  [Website](https://paipal.ai) · [Data Preview](https://data.paipal.ai) · [Twitter](https://twitter.com/paipal_ai) 
   
   <sub>Built with ❤️ by the Paipal Team</sub>
 </div>
