@@ -60,10 +60,25 @@ All fund movements and strategy changes require **governance approval**. This en
 
 $PAIPAL is a governance token that derives its value from protocol success and fee distribution.
 
-### 🎯 Utility
+### 📊 Quick Tokenomics Overview
+
+**Total Supply:** 5,000,000 $PAI (Fixed)
+
+| Category | % of Supply | Usage |
+| -------- | ---------- | ----- |
+| Community | 30% | Community engagement |
+| Liquidity | 30% | DeFi liquidity providers |
+| OGs | 10% | Early adopter incentives |
+| Governance & Ecosystem | 10% | Governance, reserves, treasury |
+| Post TGE | 20% | Staking incentives |
+
+### 🎯 Token Utility
 * 🏛️ **Governance** – Holders vote on strategy changes and protocol upgrades
-* ✅ **Data Validation** – Token holders can participate in validating yield data
-* 💰 **Fee Distribution** – Protocol fees are shared among token stakers
+* ✅ **Data Validation** – Token holders participate in validating yield data
+* 💰 **Fee Distribution** – Protocol fees shared among token stakers
+* 🔄 **Automated Buyback & Burn** – Enhancing token value over time
+
+📖 [View Detailed Tokenomics](docs/TOKENOMICS.md)
 
 ## 💪 Competitive Advantage
 
