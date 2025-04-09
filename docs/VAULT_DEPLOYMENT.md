@@ -1,17 +1,15 @@
-# 🏛️ Vault Deployment Flow
+# Vault Deployment Flow
 
 [![Version](https://img.shields.io/badge/Version-v0.2-blue)](https://paipal.ai)
 [![Security](https://img.shields.io/badge/Security-TEE_Protected-green)](https://paipal.ai)
 [![Type](https://img.shields.io/badge/Type-Technical_Spec-orange)](https://docs.paipal.ai)
 
-**AI-to-AI Coordination for Secure, Automated DeFi**
-
----
+AI-to-AI Coordination for Secure, Automated DeFi
 
 ## System Flow Diagram
 
 ```mermaid
-graph TB
+flowchart TB
     subgraph "1. User Request"
         A[User] -->|Submits Request| B[Paipal Interface]
         B -->|Specifies Parameters| C[Request Parameters]
@@ -50,7 +48,7 @@ graph TB
     R --> S
 ```
 
-## Detailed Process Flow
+## Process Flow
 
 ### 1. User Requests Vault Creation
 
@@ -58,9 +56,9 @@ A user submits a vault creation request via the Paipal interface or smart contra
 
 They specify:
 
-- Supported assets (e.g. USDC, ETH)
-- Risk level (e.g., low, medium, degen)
-- Optional filters or constraints
+1. Supported assets (e.g. USDC, ETH)
+2. Risk level (e.g., low, medium, degen)
+3. Optional filters or constraints
 
 ### 2. TEE-Protected AI Deployer Instantiates the Vault
 
@@ -68,35 +66,33 @@ The request is handled by the Deployer Agent, an AI running inside a Trusted Exe
 
 This agent:
 
-- Verifies the request
-- Generates the smart vault contract
-- Applies user-defined rules and permissions
+1. Verifies the request
+2. Generates the smart vault contract
+3. Applies user-defined rules and permissions
 
 Permissions are minimal and trustless:
 
-- Only the user can trigger withdrawals
-- Only verified Executor Agents can move funds into strategies (never to arbitrary wallets)
-- Cross-chain transfers are permissioned via secure channels (e.g., AggLayer + TEE signatures)
+1. Only the user can trigger withdrawals
+2. Only verified Executor Agents can move funds into strategies (never to arbitrary wallets)
+3. Cross-chain transfers are permissioned via secure channels (e.g., AggLayer + TEE signatures)
 
 ### 3. Ownership Assignment & Vault Registration
 
-Vault ownership is assigned to the user on-chain.
-
-The vault is registered in the Paipal Registry, allowing the AI Strategy Agent to start monitoring.
-
-Metadata (risk score, preferences) is stored off-chain or in encrypted TEE memory.
+1. Vault ownership is assigned to the user on-chain
+2. The vault is registered in the Paipal Registry
+3. Metadata (risk score, preferences) is stored off-chain or in encrypted TEE memory
 
 ### 4. AI Strategy Agent Kicks In
 
 The AI Strategy Agent (also inside a TEE) starts:
 
-- Monitoring the vault's balance and market conditions
-- Generating allocation strategies based on risk preferences
+1. Monitoring the vault's balance and market conditions
+2. Generating allocation strategies based on risk preferences
 
 Once it finds an optimal plan, it:
 
-- Signs the proposed transaction
-- Publishes it on-chain or to a secure message bus for Executor Agents
+1. Signs the proposed transaction
+2. Publishes it on-chain or to a secure message bus for Executor Agents
 
 ### 5. Executor Nodes Perform the Allocation
 
@@ -104,14 +100,14 @@ Executor Agents (community-run nodes) pick up signed instructions.
 
 They cannot change or interpret logic — only execute:
 
-- Transfer funds
-- Bridge if needed
-- Deploy to strategy (e.g. Aave, GMX, Curve)
+1. Transfer funds
+2. Bridge if needed
+3. Deploy to strategy (e.g. Aave, GMX, Curve)
 
 Execution is trustless and verifiable:
 
-- Instruction includes AI signature
-- Executors are rewarded only if the action matches the AI's signed request
+1. Instruction includes AI signature
+2. Executors are rewarded only if the action matches the AI's signed request
 
 ## Trust Model
 
@@ -123,22 +119,22 @@ Execution is trustless and verifiable:
 
 ## Security Considerations
 
-- All parameters are validated before deployment
-- Risk levels are strictly enforced
-- Asset support is verified against protocol whitelist
-- Optional filters undergo security checks
+1. All parameters are validated before deployment
+2. Risk levels are strictly enforced
+3. Asset support is verified against protocol whitelist
+4. Optional filters undergo security checks
 
 ## Technical Implementation
 
 The deployment process uses a secure, multi-step verification system to ensure:
 
-- Parameter validation
-- Security checks
-- Proper contract initialization
-- Correct asset configuration
+1. Parameter validation
+2. Security checks
+3. Proper contract initialization
+4. Correct asset configuration
 
 ## Notes
 
-- All deployments are tracked and monitored
-- Changes to vault parameters require governance approval
-- Risk levels cannot be modified after deployment without formal process 
+1. All deployments are tracked and monitored
+2. Changes to vault parameters require governance approval
+3. Risk levels cannot be modified after deployment without formal process 
