@@ -108,4 +108,52 @@ Execution is trustless and verifiable:
 |-----------|------------|---------------|------|
 | Deployer Agent | AI | ✅ | Secure vault instantiation |
 | Strategy Agent | AI | ✅ | Risk analysis + proposal |
-| Executor Agent | Human Node | ❌ (verifies TEE signature) | Performs allocation | 
+| Executor Agent | Human Node | ❌ (verifies TEE signature) | Performs allocation |
+
+# Vault Deployment Flow
+
+## Overview
+This document describes the flow of vault deployment in the Paipal Protocol system.
+
+## Flow Description
+
+1. **User Initiation**
+   - User submits a request through the Paipal Interface
+   - The request initiates the vault deployment process
+
+2. **Paipal Interface Processing**
+   - Receives user request
+   - Specifies necessary parameters for vault deployment
+
+3. **Request Parameters**
+   The request includes three main components:
+   - **Supported Assets**: Defines which assets will be supported by the vault
+   - **Risk Level**: Specifies the risk tolerance parameters
+   - **Optional Filters**: Additional configuration parameters for vault customization
+
+4. **Deployer Agent**
+   - Receives the specified parameters
+   - Verifies the request through Request Validation
+   - Generates the Smart Vault Contract based on validated parameters
+
+5. **Smart Vault Contract**
+   - Final deployed contract that implements the specified parameters
+   - Applies the configured settings and begins operation
+
+## Security Considerations
+- All parameters are validated before deployment
+- Risk levels are strictly enforced
+- Asset support is verified against protocol whitelist
+- Optional filters undergo security checks
+
+## Technical Implementation
+The deployment process uses a secure, multi-step verification system to ensure:
+- Parameter validation
+- Security checks
+- Proper contract initialization
+- Correct asset configuration
+
+## Notes
+- All deployments are tracked and monitored
+- Changes to vault parameters require governance approval
+- Risk levels cannot be modified after deployment without formal process 
