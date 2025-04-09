@@ -7,6 +7,7 @@
   [![Type](https://img.shields.io/badge/Type-Technical_Spec-orange)](https://docs.paipal.ai)
 </div>
 
+
 ---
 
 ```mermaid
